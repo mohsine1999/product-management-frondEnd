@@ -13,7 +13,7 @@
       "name": "PS5",
       "price": 800,
       "quantity": 160,
-      "selected": true,
+      "selected": false,
       "available": true
     },
     {
@@ -28,7 +28,7 @@
       "name": "elmehdi",
       "price": "10",
       "quantity": "100",
-      "selected": true,
+      "selected": false,
       "available": true,
       "id": 5
     }
