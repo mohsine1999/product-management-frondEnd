@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <button class="btn btn-primary btn-sm m-1" (click)="onGetAllProducts()">
+          <i class="fa fa-list"></i> All
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-success btn-sm m-1" (click)="OnGetAvailableProducts()">
+          <i class="fa fa-check-circle"></i> Available
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-info btn-sm m-1" (click)="OnGetSelectedProducts()">
+          <i class="fa fa-check-circle"></i> Selected
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-info btn-sm m-1" (click)="OnAddProduct()">
+          <i class="fa fa-plus-circle"></i> Add Product
+        </button>
+      </li>
+    </ul>
+    <ul>
+      <form #f="ngForm" (ngSubmit)="onSearch(f.value)" class="form-inline m-1">
+        <div class="input-group">
+          <input ngModel name="keyword" type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-outline-info">
+            <span class="fa fa-search"></span>
+          </button>
+        </div>
+      </form>
+    </ul>
+  </div>
+</div>
+
+
+<div class="container" *ngIf="productList">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>price</th>
+      <th>quantity</th>
+      <th>selected</th>
+      <th>available</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of productList">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.quantity}}</td>
+      <td>{{product.selected}}</td>
+      <td>{{product.available}}</td>
+      <td>
+        <button (click)="onSelect(product)" [ngClass]="product.selected? 'btn-success' : 'btn-danger' "
+                class="btn btn-sm">
+          <span *ngIf="product.selected">Unselect</span>
+          <span *ngIf="!product.selected">Select</span>
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="onDelete(product)">
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-warning" (click)="onEditProduct(product)">
+          <i class="fa fa-pencil-square-o"></i>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #errorOrLoding>
+  <ng-container *ngIf="errorMessage; else loading">
+    <div class="text-danger">
+      {{errorMessage | json}}
+    </div>
+  </ng-container>
+  <ng-template #loading>
+    <div>There is a problem...</div>
+  </ng-template>
+</ng-template>

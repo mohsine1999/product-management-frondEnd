@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Souq-Jemla</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/products">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li>
+        <div ngbDropdown class="dropdown">
+          <button ngbDropdownToggle class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton1" aria-expanded="false">
+            Dropdown button
+          </button>
+          <ul ngbDropdownMenu aria-labelledby="dropdownMenuButton1">
+            <li><a ngbDropdownItem href="#">Action</a></li>
+            <li><a ngbDropdownItem href="#">Another action</a></li>
+            <li><a ngbDropdownItem href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+

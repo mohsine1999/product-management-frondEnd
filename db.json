@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": 4,
+      "name": "MacOS",
+      "price": "3999",
+      "quantity": 200,
+      "selected": true,
+      "available": true
+    },
+    {
+      "id": 1,
+      "name": "PS5",
+      "price": 800,
+      "quantity": 160,
+      "selected": true,
+      "available": true
+    },
+    {
+      "name": "MacOS",
+      "price": 300,
+      "quantity": 200,
+      "selected": false,
+      "available": false,
+      "id": 2
+    },
+    {
+      "name": "elmehdi",
+      "price": "10",
+      "quantity": "100",
+      "selected": true,
+      "available": true,
+      "id": 5
+    }
+  ]
+}
