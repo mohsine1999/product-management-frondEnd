@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {Observable} from "rxjs";
 import {ProductModel} from "../models/product.model";
+import {User} from "../models/user.model";
 
 @Injectable({
   providedIn: 'root'
@@ -61,4 +62,43 @@ export class ProductsService {
     let host = environment.ApiProducts;
     return this.http.put<ProductModel>(host+"/"+product.id,product);
   }
+
+  //user service
+  getAllUsers() : Observable<any>{
+    let host = environment.ApiUsers;
+    return this.http.get<any>(host);
+  }
+
+  getUser(id : number) : Observable<any>{
+    let host = environment.ApiUsers;
+    return this.http.get<any>(host+"/"+id);
+  }
+
+  saveUser(user : any) : Observable<any>{
+    let host = environment.ApiUsers;
+    return this.http.post<any>(host, user);
+  }
+
+  updateUser(user : any) : Observable<any>{
+    let host = environment.ApiUsers;
+    return this.http.put<any>(host+"/"+user.id, user);
+  }
+
+  isUserActive(user : User) : Observable<User>{
+    let host = environment.ApiUsers;
+    user.active = ! user.active;
+    return this.http.put<User>(host+"/"+user.id, user);
+  }
+
+
+  getUserByUsername(username : string) : Observable<User>{
+    let host = environment.ApiUsers;
+    return this.http.get<User>(host+"?username="+username);
+  }
+
+  getUserByEmailAddress(email : string) : Observable<User>{
+    let host = environment.ApiUsers;
+    return this.http.get<User>(host+"?email="+email);
+  }
+
 }

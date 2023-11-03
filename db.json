@@ -13,14 +13,14 @@
       "name": "PS5",
       "price": 800,
       "quantity": 160,
-      "selected": false,
+      "selected": true,
       "available": true
     },
     {
       "name": "MacOS",
       "price": 300,
       "quantity": 200,
-      "selected": false,
+      "selected": true,
       "available": false,
       "id": 2
     },
@@ -28,9 +28,114 @@
       "name": "elmehdi",
       "price": "10",
       "quantity": "100",
-      "selected": false,
+      "selected": true,
       "available": true,
       "id": 5
+    },
+    {
+      "name": "Iphone 15",
+      "price": "12000",
+      "quantity": "123",
+      "selected": true,
+      "available": true,
+      "id": 6
+    },
+    {
+      "name": "Iphone 12",
+      "price": "7000",
+      "quantity": "23",
+      "selected": true,
+      "available": true,
+      "id": 7
+    },
+    {
+      "name": "Samsung",
+      "price": "12000",
+      "quantity": "120",
+      "selected": true,
+      "available": true,
+      "id": 8
+    },
+    {
+      "name": "t",
+      "price": 0,
+      "quantity": 0,
+      "selected": true,
+      "available": true,
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "mosine",
+      "email": "mosine@gmail.com",
+      "password": "123456",
+      "role": "admin",
+      "active": false
+    },
+    {
+      "name": "mosine2",
+      "username": "test",
+      "password": "1253",
+      "email": "Mohsine090hajjar@gmail.com",
+      "role": "User",
+      "active": true,
+      "id": 2
+    },
+    {
+      "name": "outman",
+      "username": "out",
+      "password": "undefinedundefinedundefinedundefined",
+      "email": "Mohsine090hajjar@gmail.com",
+      "role": "User",
+      "active": false,
+      "id": 3
+    },
+    {
+      "name": "iy",
+      "username": "oiyyoy",
+      "password": "LNRHMD",
+      "email": "MOHSINE",
+      "role": "User",
+      "active": true,
+      "id": 4
+    },
+    {
+      "name": "LMIO",
+      "username": "OIJOP",
+      "password": "XVVASN",
+      "email": "JOPU",
+      "role": "Admin",
+      "active": false,
+      "id": 5
+    },
+    {
+      "name": "mohsine",
+      "username": "hajjar",
+      "password": "KGCREIHY",
+      "email": "Mohsine090hajjar@gmail.com",
+      "role": "Admin",
+      "active": true,
+      "id": 6
+    },
+    {
+      "name": "mohsine)àià)",
+      "username": "mosine",
+      "password": "KGCREIHY",
+      "email": "kiefzjàfrjç",
+      "role": "User",
+      "active": true,
+      "id": 7
+    },
+    {
+      "name": "oefzik",
+      "username": "opjfzji",
+      "password": "KGCREIHYD",
+      "email": "mosine@gmail.com",
+      "role": "Admin",
+      "active": true,
+      "id": 8
     }
   ]
 }

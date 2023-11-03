@@ -11,6 +11,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { StoreModule } from '@ngrx/store';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
@@ -19,17 +21,20 @@ import { EditProductComponent } from './components/edit-product/edit-product.com
     ProductsComponent,
     HomeComponent,
     AddProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    AddUserComponent,
+    UsersComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        FormsModule,
-        ReactiveFormsModule,
-        NgbModule,
-        StoreModule.forRoot({}, {})
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
+    StoreModule.forRoot({}, {}),
+
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

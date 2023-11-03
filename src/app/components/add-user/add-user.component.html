@@ -1,0 +1,48 @@
+<div class="container" *ngIf="userFormGroup">
+  <!--  {{productFormGroup.value | json}}-->
+  <form [formGroup]="userFormGroup">
+    <div class="form-group">
+      <label>Name : </label>
+      <input type="text" placeholder="name ..." class="form-control" formControlName="name"
+             [ngClass]="{'is-invalid' : submitted && userFormGroup.controls['name'].errors}">
+      <div *ngIf="userFormGroup.controls['name'].errors?.['required']" class="invalid-feedback">
+        <div *ngIf="userFormGroup.controls['name'].errors?.['required']">
+          Name is required
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="hidden"   formControlName="id">
+    </div>
+
+    <div class="form-group">
+      <label>User Name : </label>
+      <input type="text" placeholder="username ..." class="form-control" formControlName="username">
+    </div>
+
+    <div class="form-group">
+      <label>Email : </label>
+      <input type="text" placeholder="email ..." class="form-control" formControlName="email">
+    </div>
+
+    <div class="form-group">
+      <label>Password : </label>
+      <input type="text" placeholder="password ..." class="form-check" formControlName="password">
+    </div>
+
+    <div class="form-group">
+      <label>role : </label>
+      <select class="form-control" formControlName="role">
+        <option >Admin</option>
+        <option >User</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Is Active ? </label>
+      <input type="checkbox" class="form-check" formControlName="active">
+    </div>
+
+    <button class="btn btn-success" (click)="onSave()"><i class="fa fa-location-arrow"></i> Save</button>
+  </form>
+</div>
